@@ -138,7 +138,7 @@
             var vremeError = document.getElementById('vremeError');
 
             if (!datumInput.value) {
-                datumError.innerHTML = 'Morate izabrati datum.';
+                datumError.innerHTML = 'You must select a date.';
                 datumError.classList.remove('sakrij');
                 datumInput.classList.add('crvena-bordura');
             } else {
@@ -148,7 +148,7 @@
             }
 
             if (!vremeInput.value) {
-                vremeError.innerHTML = 'Morate izabrati vreme.';
+                vremeError.innerHTML = 'You have to choose the time.';
                 vremeError.classList.remove('sakrij');
                 vremeInput.classList.add('crvena-bordura');
             } else {
@@ -166,14 +166,14 @@
             var email = emailInput.value;
 
             if (email.trim() === '') {
-                emailError.innerHTML = 'Morate uneti email.';
+                emailError.innerHTML = 'You must enter an email.';
                 emailError.classList.remove('sakrij');
                 emailInput.classList.add('crvena-bordura');
                 return false;
             }
 
             if (email.indexOf('@') === -1) {
-                emailError.innerHTML = 'Email treba sadržati @.';
+                emailError.innerHTML = 'Email should contain @.';
                 emailError.classList.remove('sakrij');
                 emailInput.classList.add('crvena-bordura');
                 return false;
@@ -190,7 +190,7 @@
             }
 
             if (!validnaDomena) {
-                emailError.innerHTML = 'Email se mora završavati sa .com, .rs, .yahoo.';
+                emailError.innerHTML = 'The email must end with .com, .rs, .yahoo.';
                 emailError.classList.remove('sakrij');
                 emailInput.classList.add('crvena-bordura');
                 return false;
@@ -207,7 +207,7 @@
             var osobaError = document.getElementById('osobaError');
 
             if (osobaDropDown.value === '0') {
-                osobaError.innerHTML = 'Morate izabrati koliko osoba želite.';
+                osobaError.innerHTML = 'You have to choose how many people you want.';
                 osobaError.classList.remove('sakrij');
                 osobaDropDown.classList.add('crvena-bordura');
                 return false;
@@ -225,21 +225,21 @@
             var ime = nameInput.value.trim();
 
             if (ime.trim() === '') {
-                nameError.innerHTML = 'Polje ime ne sme biti prazno.';
+                nameError.innerHTML = 'The name field must not be empty.';
                 nameError.classList.remove('sakrij');
                 nameInput.classList.add('crvena-bordura');
                 return false;
             }
 
             if (ime[0] !== ime[0].toUpperCase()) {
-                nameError.innerHTML = 'Ime mora počinjati velikim slovom.';
+                nameError.innerHTML = 'The name must start with a capital letter.';
                 nameError.classList.remove('sakrij');
                 nameInput.classList.add('crvena-bordura');
                 return false;
             }
 
             if (ime.length < 3) {
-                nameError.innerHTML = 'Ime treba imati najmanje 3 slova.';
+                nameError.innerHTML = 'The name should have at least 3 letters.';
                 nameError.classList.remove('sakrij');
                 nameInput.classList.add('crvena-bordura');
                 return false;
@@ -257,21 +257,21 @@
             var prezime = surnameInput.value.trim();
 
             if (prezime.trim() === '') {
-                surnameError.innerHTML = 'Polje Prezime ne sme biti prazno.';
+                surnameError.innerHTML = 'The Surname field must not be empty.';
                 surnameError.classList.remove('sakrij');
                 surnameInput.classList.add('crvena-bordura');
                 return false;
             }
 
             if (prezime[0] !== prezime[0].toUpperCase()) {
-                surnameError.innerHTML = 'Prezime mora počinjati velikim slovom.';
+                surnameError.innerHTML = 'The last name must start with a capital letter.';
                 surnameError.classList.remove('sakrij');
                 surnameInput.classList.add('crvena-bordura');
                 return false;
             }
 
             if (prezime.length < 3) {
-                surnameError.innerHTML = 'Prezime treba imati najmanje 3 slova.';
+                surnameError.innerHTML = 'Surname should have at least 3 letters.';
                 surnameError.classList.remove('sakrij');
                 surnameInput.classList.add('crvena-bordura');
                 return false;
@@ -292,13 +292,16 @@
 
             if (validacija1 && validacija2 && validacija3 && validacija4 && validacija5) {
                 
-                document.getElementById('ispis').innerHTML = 'Forma je uspešno poslata!';
+                document.getElementById('ispis').innerHTML = 'Sent successfully';
             } else {
                 
                 document.getElementById('ispis').innerHTML = '';
             }
         }
         
+
+
+         
         
         
     
