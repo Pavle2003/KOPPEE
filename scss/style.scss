@@ -314,23 +314,5 @@ h6,
     }
 }
 
-.popupHover{
-    .popup-image{
-        span{
-            position: absolute;
-            top: 0;
-            right: 10px;
-            font-size: 60px;
-            font-weight: bolder;
-            color: #fff;
-            cursor: pointer;
-            z-index: 100;
-            transition: 0.5;
-        }
-    }
-}
 
-.popup-image span:hover{
-    transform: rotate(180deg);
-}
 

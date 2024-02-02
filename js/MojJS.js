@@ -269,15 +269,6 @@
                 document.getElementById('ispis2').innerHTML = '';
             }
         }
-        
-       
-        function popup() {
-            document.querySelector('popup-image img').forEach(image=>{
-                image.onclick = () =>{
-                    document.querySelector('.popup').style.display = 'block';
-                }
-            })
-        }
 
         /* -----------------------Jquery----------------------- */
 

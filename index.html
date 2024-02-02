@@ -176,11 +176,11 @@
             <div class="row popupHover">
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-sm-5" id="picture1">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-1.jpg" alt="Coffe1" onmouseover ="dodajHoverEfekat(this)" >
+                        <div class="col-sm-5" id="picture1" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-1.jpg" alt="Coffe1" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal">
                         </div>
                         <div class="col-sm-7">
-                            <h4><i class="fa fa-truck service-icon"></i>Fastest Door Delivery</h4>
+                            <h4><i class="fa fa-truck service-icon" ></i>Fastest Door Delivery</h4>
                             <p class="m-0">If you feel like drinking coffee and hate leaving the house, don't worry, 
                                 we have delivery that will bring it to your home address as soon as possible.</p>
                         </div>
@@ -189,7 +189,7 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture2">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-2.jpg" alt="Coffe2" onmouseover ="dodajHoverEfekat(this)" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-2.jpg" alt="Coffe2" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal2" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
@@ -201,7 +201,7 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture3">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-3.jpg" alt="Coffe3" onmouseover ="dodajHoverEfekat(this)" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-3.jpg" alt="Coffe3" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal3" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
@@ -212,7 +212,7 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture4">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-4.jpg" alt="Coffe4" onmouseover ="dodajHoverEfekat(this)" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-4.jpg" alt="Coffe4" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal4" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
@@ -221,9 +221,53 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup-image" onclick="popup()">
-                    <span>&times;</span>
-                    <img src="img/service-1.jpg" alt="Coffe1" />
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <img class="img-fluid" src="img/service-1.jpg" alt="Coffe1">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <img class="img-fluid" src="img/service-2.jpg" alt="Coffe1">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <img class="img-fluid" src="img/service-3.jpg" alt="Coffe1">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <img class="img-fluid" src="img/service-4.jpg" alt="Coffe1">
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
