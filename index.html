@@ -24,7 +24,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
-        
+    
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                     <a href="#menuKafa" class="nav-item nav-link">Menu</a>
                     <a href="#reservationKafa" class="nav-item nav-link">Reservation</a>
                     <a href="#testimonialKafa" class="nav-item nav-link">Testimonial</a>
-                    <a href="autor.html" class="nav-item nav-link active">Author</a>
+                    <a href="autor.html" class="nav-item nav-link">Author</a>
                 </div>
             </div>
         </nav>
@@ -112,13 +112,13 @@
                 <div class="col-lg-4 py-0 py-lg-5">
                     <h1 class="mb-3">Our Story</h1>
                     <h5 class="mb-3">We have been in the city of Birmingham since 1950 and have been at your service for over 70 years</h5>
-                    <p class="text">Once upon a time, in the heart of our bustling city, there stood a quaint coffee haven known as "KOPPEE" Nestled between the bustling streets,
+                    <p class="text1" style="display: none;">Once upon a time, in the heart of our bustling city, there stood a quaint coffee haven known as "KOPPEE" Nestled between the bustling streets,
                          this charming café had been the cherished secret of coffee enthusiasts since its inception in the year 1950<span class="dots"> ...</span><span class="readmoretext" style="display: none;">KAPPEE 
                             wasn't just a café; it was a living testament to the art and science of crafting the perfect cup of coffee. The aroma of freshly ground 
                             beans and the soothing hum of the vintage espresso machines created an ambiance that was as comforting as a familiar melody. From the moment
                              one stepped through the worn wooden door, they were transported into a world where time seemed to slow down, and the rich history of the 
                              place enveloped them like a warm embrace.</span></p>
-                    <button class="btn btn-secondary font-weight-bold py-2 px-4 mt-2" id="learnMoreButton" class="read-more-btn" onclick="toggleText()">Read More</button>
+                    <button class="btn btn-secondary font-weight-bold py-2 px-4 mt-2" id="learnMoreButton" class="read-more-btn" >Read More</button>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="height: 500px;">
                     <div class="position-relative h-100">
@@ -176,8 +176,8 @@
             <div class="row">
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="Coffe4">
+                        <div class="col-sm-5" id="picture1">
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-1.jpg" alt="Coffe1" onmouseover ="dodajHoverEfekat(this)" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-truck service-icon"></i>Fastest Door Delivery</h4>
@@ -188,8 +188,8 @@
                 </div>
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-2.jpg" alt="Coffe4">
+                        <div class="col-sm-5" id="picture2">
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-2.jpg" alt="Coffe2" onmouseover ="dodajHoverEfekat(this)" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
@@ -200,8 +200,8 @@
                 </div>
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-3.jpg" alt="Coffe3">
+                        <div class="col-sm-5" id="picture3">
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-3.jpg" alt="Coffe3" onmouseover ="dodajHoverEfekat(this)" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
@@ -211,8 +211,8 @@
                 </div>
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-4.jpg" alt="Coffe4">
+                        <div class="col-sm-5" id="picture4">
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-4.jpg" alt="Coffe4" onmouseover ="dodajHoverEfekat(this)" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
@@ -220,6 +220,10 @@
                                 favorite table that you like to sit at, don't worry, you can reserve a table through our website</p>
                         </div>
                     </div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="img/service-1.jpg" alt="Coffe1" />
                 </div>
             </div>
         </div>
@@ -237,16 +241,18 @@
             <form class="form-inline justify-content-center mb-4">
                 <div class="input-group">
                     <div class="email" id="email" data-target-input="nearest">
-                        <input type="email" class="form-control p-4" id="emailInput" placeholder="Your Email" style="height: 60px;">
-                        <span id="emailError" class="text-danger"></span>  
-                    </div>
+                        <input type="email" class="form-control p-4" id="emailInput" placeholder="Your Email" style="height: 60px;">                       
+                    </div>                   
                     <div class="input-group-append">
-                        <button class="btn btn-primary btn-block font-weight-bold py-3" type="button" onclick="obradiFormu()">Send</button>
-                    </div>
-                </div>
+                        <button class="btn btn-primary btn-block font-weight-bold py-3" type="button" onclick="obradiFormu2()">Send</button>
+                    </div>                    
+                </div>                
             </form>
+            <span id="emailError" class="text-danger"></span>
+            <div id="ispis1"></div>
         </div>
     </div>
+    
     <!--<div class="email" id="email" data-target-input="nearest">
             <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
                         required="required" id="emailInput"/>  
@@ -417,10 +423,10 @@
                                 <div class="form-group">
                                     <select id="osobaDropdown" class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
                                         <option selected value="0">Person</option>
-                                        <option value="1">Person 1</option>
-                                        <option value="2">Person 2</option>
-                                        <option value="3">Person 3</option>
-                                        <option value="4">Person 4</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 Person</option>
+                                        <option value="3">3 Person</option>
+                                        <option value="4">4 Person</option>
                                     </select>
                                     <span id="osobaError" class="text-danger sakrij"></span>
                                 </div>
@@ -452,7 +458,7 @@
                         <img class="img-fluid" src="img/testimonial-1.jpg" alt="">
                         <div class="ml-3">
                             <h4>Emma Foster</h4>
-                            <i>Profession</i>
+                            <i>Rating 9.75/10</i>
                         </div>
                     </div>
                     <p class="m-0">I was delighted to visit this cafe! The coffee was extremely delicious, especially their unique
@@ -464,7 +470,7 @@
                         <img class="img-fluid" src="img/testimonial-2.jpg" alt="">
                         <div class="ml-3">
                             <h4>Liam Turner</h4>
-                            <i>Profession</i>
+                            <i>Rating 10/10</i>
                         </div>
                     </div>
                     <p class="m-0">Fantastic experience! I tried their cinnamon iced coffee and was delighted. This is a real
@@ -476,7 +482,7 @@
                         <img class="img-fluid" src="img/testimonial-3.jpg" alt="">
                         <div class="ml-3">
                             <h4>Sophia Mitchell</h4>
-                            <i>Profession</i>
+                            <i>Rating 9/10</i>
                         </div>
                     </div>
                     <p class="m-0">A cafe with a real spirit! Their offer of different varieties of coffee is something special.
@@ -487,7 +493,7 @@
                         <img class="img-fluid" src="img/testimonial-4.jpg" alt="">
                         <div class="ml-3">
                             <h4>Oliver Harrison</h4>
-                            <i>Profession</i>
+                            <i>Rating 8.5/10</i>
                         </div>
                     </div>
                     <p class="m-0">
@@ -533,14 +539,16 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <p>You can enter your email, and you will receive all price changes, new discounts, fun events, etc...</p>
                 <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                    <div class="input-group" id="email2" >
+                        <input type="text" class="form-control border-light" id="emailInput2" style="padding: 25px;" placeholder="Your Email">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
-                        </div>
+                            <button class="btn btn-primary font-weight-bold px-3" onclick="obradiFormu3()">Sign Up</button>
+                        </div>                      
                     </div>
+                    <span id="emailError2" class="text-danger"></span>
+                    <div id="ispis2"></div>
                 </div>
             </div>
         </div>

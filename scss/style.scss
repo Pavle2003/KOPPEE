@@ -248,6 +248,7 @@ h6,
     cursor: pointer;
     outline: none;
 }
+
 #aboutKafa{
     .text{
         overflow: hidden;
@@ -288,6 +289,12 @@ h6,
 @keyframes rotate {
     50% {
         transform: rotate(-90deg);
+    }
+}
+
+#picture4:hover{
+    img{
+    transform: scale(1.05);
     }
 }
 
