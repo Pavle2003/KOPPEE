@@ -281,17 +281,6 @@ h6,
     -webkit-animation: rotate 4s infinite;
 }
 
-@-webkit-keyframes rotate {
-    100% {
-        transform: rotate(90deg);
-    }
-}
-@keyframes rotate {
-    50% {
-        transform: rotate(-90deg);
-    }
-}
-
 .popupHover{
     .popup-image{
         position: fixed;

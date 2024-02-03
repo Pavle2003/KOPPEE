@@ -1,4 +1,5 @@
        
+       //Pokazivanje sadržaja klikom i uvlačenje drugim klikom
         document.querySelectorAll('.additionalText').forEach(function(element) {
             element.style.display = 'none';
         });
@@ -16,22 +17,7 @@
             }
         }
 
-        function toggleImageZoom(img) {
-            var overlay = document.getElementById('overlay');
-            var modal = document.getElementById('modal');
-            var modalImg = document.getElementById('modalImg');
-
-            if (overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-                modal.classList.remove('active');
-                modalImg.src = "";
-            } else {
-                overlay.classList.add('active');
-                modal.classList.add('active');
-                modalImg.src = img.src;
-            }
-        }
-
+        //validacija datuma i vremena
         function proveriIzborDatumVreme() {
             var datumInput = document.getElementById('datum');
             var vremeInput = document.getElementById('vreme');
@@ -95,6 +81,7 @@
             return (!datumError.innerHTML && !vremeError.innerHTML);
         }
 
+        //validacija emaila
         function proveriEmail() {
             var emailInput = document.getElementById('emailInput');
             var emailError = document.getElementById('emailError');
@@ -122,6 +109,7 @@
             return true;
         }
 
+        //validacija drugog emaila
         function proveriEmail2() {
             var emailInput2 = document.getElementById('emailInput2');
             var emailError2 = document.getElementById('emailError2');
@@ -149,7 +137,7 @@
             return true;
         }
 
-
+        //validacija drop down liste
         function proveriIzborOsobe() {
             var osobaDropDown = document.getElementById('osobaDropdown');
             var osobaError = document.getElementById('osobaError');
@@ -167,6 +155,7 @@
             }
         }
 
+        //validacija imena
         function proveriIme() {
             var nameInput = document.getElementById('nameInput');
             var nameError = document.getElementById('nameError');
@@ -199,6 +188,7 @@
         }
     
 
+        //validacija prezimena
         function proveriPrezime() {
             var surnameInput = document.getElementById('surnameInput');
             var surnameError = document.getElementById('surnameError');
@@ -231,6 +221,7 @@
         }
 
 
+        //Funkcija za proveru tačnosti forme
         function obradiFormu() {
             var validacija1 = proveriIzborDatumVreme();
             var validacija2 = proveriIzborOsobe();
@@ -246,6 +237,7 @@
             }
         }
         
+        //Funkcija za proveru tačnosti emaila
         function obradiFormu2() {
             var validacija5 = proveriEmail();
         
@@ -258,6 +250,7 @@
             }
         }
 
+        //Funkcija za proveru tačnosti drugog emaila
         function obradiFormu3() {
             var validacija6 = proveriEmail2();
         
@@ -271,7 +264,7 @@
         }
 
 
-        // Kreiramo HTML elemente dinamički
+        // Kreiranje HTML dinamičkog sadržaja nav bara
         var navbarContainer = document.getElementById("navbarContainer");
         var nav = document.createElement("nav");
         nav.className = "navbar navbar-expand-lg bg-none navbar-dark py-3";
@@ -324,11 +317,9 @@
 
 
 
-        
-
-
-
         /* -----------------------Jquery----------------------- */
+
+        //Funkcija za pravljenje smothScrolla
         function smothScroll() {
        $(document).ready(function(){
             $('nav a').on('click', function(event) {
@@ -342,6 +333,7 @@
           });
         }
 
+        //Funkcija za toggle
         $(document).ready(function(){
             $('#learnMoreButton').on('click', function() {
               $('.text1').slideToggle(500);
@@ -354,11 +346,12 @@
             });
           });
 
+          //Funkcija za uvećavanje slike
           function dodajHoverEfekat() {
             $(".pictureService").hover(function() {
-              $(this).css("transform", "scale(1.1)"); // Uvećava sliku za 10% na hover
+              $(this).css("transform", "scale(1.1)"); 
             }, function() {
-              $(this).css("transform", "scale(1)"); // Vraća sliku na normalnu veličinu nakon hover-a
+              $(this).css("transform", "scale(1)"); 
             });
           }
 
