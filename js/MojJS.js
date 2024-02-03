@@ -270,8 +270,66 @@
             }
         }
 
-        /* -----------------------Jquery----------------------- */
 
+        // Kreiramo HTML elemente dinamički
+        var navbarContainer = document.getElementById("navbarContainer");
+        var nav = document.createElement("nav");
+        nav.className = "navbar navbar-expand-lg bg-none navbar-dark py-3";
+
+        var navbarBrand = document.createElement("a");
+        navbarBrand.href = "index.html";
+        navbarBrand.className = "navbar-brand px-lg-4 m-0";
+        var title = document.createElement("h1");
+        title.className = "m-0 display-4 text-uppercase text-white";
+        title.textContent = "KOPPEE";
+        navbarBrand.appendChild(title);
+        nav.appendChild(navbarBrand);
+
+        var togglerButton = document.createElement("button");
+        togglerButton.type = "button";
+        togglerButton.className = "navbar-toggler";
+        togglerButton.setAttribute("data-toggle", "collapse");
+        togglerButton.setAttribute("data-target", "#navbarCollapse");
+        var togglerIcon = document.createElement("span");
+        togglerIcon.className = "navbar-toggler-icon";
+        togglerButton.appendChild(togglerIcon);
+        nav.appendChild(togglerButton);
+
+        var navbarCollapse = document.createElement("div");
+        navbarCollapse.className = "collapse navbar-collapse justify-content-between";
+        navbarCollapse.id = "navbarCollapse";
+        var navbarLinks = document.createElement("div");
+        navbarLinks.className = "navbar-nav ml-auto p-4";
+        var links = [
+            { href: "index.html", text: "Home", active: true },
+            { href: "#aboutKafa", text: "About", active: false },
+            { href: "#serviceKafa", text: "Service", active: false },
+            { href: "#menuKafa", text: "Menu", active: false },
+            { href: "#reservationKafa", text: "Reservation", active: false },
+            { href: "#testimonialKafa", text: "Testimonial", active: false },
+            { href: "autor.html", text: "Author", active: false }
+        ];
+
+        links.forEach(function(link) {
+            var anchor = document.createElement("a");
+            anchor.href = link.href;
+            anchor.className = "nav-item nav-link" + (link.active ? " active" : "");
+            anchor.textContent = link.text;
+            navbarLinks.appendChild(anchor);
+        });
+
+        navbarCollapse.appendChild(navbarLinks);
+        nav.appendChild(navbarCollapse);
+        navbarContainer.appendChild(nav);
+
+
+
+        
+
+
+
+        /* -----------------------Jquery----------------------- */
+        function smothScroll() {
        $(document).ready(function(){
             $('nav a').on('click', function(event) {
               if (this.hash !== '') {
@@ -282,7 +340,7 @@
               }
             });
           });
-        
+        }
 
         $(document).ready(function(){
             $('#learnMoreButton').on('click', function() {

@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-NPQe/MTDtZ7bh+rvoCQk6KoKkT6Boo5Q7egxrxeO9NlYiYIK2UaQiZpDTZ6/zx6xKL9tws9g/6OzpwOcY1GPMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,31 +30,11 @@
 
 <body>
     <main>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 class="m-0 display-4 text-uppercase text-white">KOPPEE</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="#aboutKafa" class="nav-item nav-link">About</a>
-                    <a href="#serviceKafa" class="nav-item nav-link">Service</a>
-                    <a href="#menuKafa" class="nav-item nav-link">Menu</a>
-                    <a href="#reservationKafa" class="nav-item nav-link">Reservation</a>
-                    <a href="#testimonialKafa" class="nav-item nav-link">Testimonial</a>
-                    <a href="autor.html" class="nav-item nav-link">Author</a>
-                </div>
-            </div>
-        </nav>
-    </div>
+    <!-- Ovde sam dinamicki ispisao nav -->
+    <div class="container-fluid p-0 nav-bar" id="navbarContainer" onclick="smothScroll"></div>
     <!-- Navbar End -->
 
-    <!-- Carousel Start -->
+    <!-- Ovaj deo nije moj -->
     <div class="container-fluid p-0 mb-5">
         <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
             <div class="carousel-inner">
@@ -101,7 +82,7 @@
     <!-- Carousel End -->
 
 
-    <!-- About Start -->
+    <!-- U ovom delu sam dodavao toggle sa leve strane i napravio na desnoj strani-->
     <div class="container-fluid py-5" id="aboutKafa">
         <div class="container">
             <div class="section-title">
@@ -166,7 +147,7 @@
     <!-- About End -->
 
 
-    <!-- Service Start -->
+    <!-- U ovom delunsam dodavao funkcije na sliku, i dodao prikrivene slike ispod njih -->
     <div class="container-fluid pt-5" id="serviceKafa">
         <div class="container">
             <div class="section-title">
@@ -177,7 +158,8 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture1" >
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-1.jpg" alt="Coffe1" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal">
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-1.jpg" alt="Coffe1" 
+                            onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal">
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-truck service-icon" ></i>Fastest Door Delivery</h4>
@@ -189,7 +171,8 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture2">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-2.jpg" alt="Coffe2" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal2" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-2.jpg" alt="Coffe2" 
+                            onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal2" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
@@ -201,7 +184,8 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture3">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-3.jpg" alt="Coffe3" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal3" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-3.jpg" alt="Coffe3" 
+                            onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal3" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
@@ -212,7 +196,8 @@
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5" id="picture4">
-                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-4.jpg" alt="Coffe4" onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal4" >
+                            <img class="img-fluid mb-3 mb-sm-0 pictureService" src="img/service-4.jpg" alt="Coffe4" 
+                            onmouseover ="dodajHoverEfekat(this)" data-toggle="modal" data-target="#myModal4" >
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
@@ -276,7 +261,7 @@
     <!-- Service End -->
 
 
-    <!-- Offer Start -->
+    <!-- Ovde sam obradio validaciju emaila -->
     <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
         <div class="container py-5">
             <h1 class="display-3 text-primary mt-3">Get a job today</h1>
@@ -296,16 +281,9 @@
             <div id="ispis1"></div>
         </div>
     </div>
-    
-    <!--<div class="email" id="email" data-target-input="nearest">
-            <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
-                        required="required" id="emailInput"/>  
-                <span id="emailError" class="text-danger"></span>                                  
-        </div>-->
-    <!-- Offer End -->
 
 
-    <!-- Menu Start -->
+    <!-- Ovaj blok nisam menjao -->
     <div class="container-fluid pt-5" id="menuKafa">
         <div class="container">
             <div class="section-title">
@@ -385,7 +363,7 @@
     <!-- Menu End -->
 
 
-    <!-- Reservation Start -->
+    <!-- Ovde sam sa leve strane dodao keo i gore u About us toggle, a sa desne je moja cela validacija forme -->
     <div class="container-fluid my-5" id="reservationKafa">
         <div class="container">
             <div class="reservation position-relative overlay-top overlay-bottom">
@@ -440,30 +418,28 @@
                                     <input type="text" id="nameInput" class="form-control bg-transparent border-primary p-4" placeholder="Name" required="required" />
                                     <span id="nameError" class="text-danger"></span>
                                 </div>
+
                                 <div class="form-group">
                                     <input type="text" id="surnameInput" class="form-control bg-transparent border-primary p-4" placeholder="Surname" required="required" />
                                     <span id="surnameError" class="text-danger"></span>
                                 </div>
-                                <!--<div class="form-group">
-                                    <div class="email" id="email" data-target-input="nearest">
-                                        <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
-                                        required="required" id="emailInput"/>  
-                                        <span id="emailError" class="text-danger"></span>                                  
-                                    </div>
-                                </div>-->
+                        
                                 <div class="form-group">
                                     <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" id="datum" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
+                                        <input type="text" id="datum" class="form-control bg-transparent border-primary p-4 datetimepicker-input" 
+                                        placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
                                     </div>
                                     <span id="datumError" class="text-danger sakrij"></span>
                                 </div>
                             
                                 <div class="form-group">
                                     <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" id="vreme" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
+                                        <input type="text" id="vreme" class="form-control bg-transparent border-primary p-4 datetimepicker-input" 
+                                        placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
                                     </div>
                                     <span id="vremeError" class="text-danger sakrij"></span>
                                 </div>
+
                                 <div class="form-group">
                                     <select id="osobaDropdown" class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
                                         <option selected value="0">Person</option>
@@ -489,7 +465,7 @@
     <!-- Reservation End -->
 
 
-    <!-- Testimonial Start -->
+    <!-- Ovde sam samo promenio tekst, ostali nije moje -->
     <div class="container-fluid py-5" id="testimonialKafa">
         <div class="container">
             <div class="section-title">
@@ -552,7 +528,7 @@
     <!-- Testimonial End -->
 
 
-    <!-- Footer Start -->
+    <!-- U futeru od javascript koda sam izvrsio validaciju emaila -->
     <footer>
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
         <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
@@ -568,7 +544,7 @@
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="sitemap.xml" target="_blank"><i class="fas fa-sitemap"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
@@ -597,17 +573,14 @@
             </div>
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="autor.html">HTML Codex</a></p>
+            <p class="m-0 text-white"><a class="font-weight-bold" href="dokumentacija.pdf">Documentation</a></p>
         </div>
     </div>
     </footer>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
     <!-- JavaScript Libraries -->
     <script src="js/MojJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -618,14 +591,10 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    
 </body>
-
 </html>
