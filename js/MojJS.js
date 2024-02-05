@@ -316,6 +316,64 @@
         navbarContainer.appendChild(nav);
 
 
+        const testimonials = [
+            {
+                name: "Emma Foster",
+                rating: "Rating 9.75/10",
+                imageSrc: "img/testimonial-1.jpg",
+                feedback: "I was delighted to visit this cafe! The coffee was extremely delicious, especially their unique blend that I tried for the first time. The atmosphere is relaxing and the staff very friendly. I will definitely be back!"
+            },
+            {
+                name: "Liam Turner",
+                rating: "Rating 10/10",
+                imageSrc: "img/testimonial-2.jpg",
+                feedback: "Fantastic experience! I tried their cinnamon iced coffee and was delighted. This is a real refreshment, and the ambiance is pleasant and modernly decorated. I highly recommend it to everyone who likes to enjoy coffee in a unique way."
+            },
+            {
+                name: "Sophia Mitchell",
+                rating: "Rating 9/10",
+                imageSrc: "img/testimonial-3.jpg",
+                feedback: "A cafe with a real spirit! Their offer of different varieties of coffee is something special. I felt like a real coffee shopper while enjoying their specialty. The staff is professional and very pleasant."
+            },
+            {
+                name: "Oliver Harrison",
+                rating: "Rating 8.5/10",
+                imageSrc: "img/testimonial-4.jpg",
+                feedback: "Great location for coffee lovers! The quality of the coffee is exceptional, and the selection is truly varied. I especially liked their carefully selected music that creates the perfect atmosphere. They even had a treat for my dog Rex. I definitely recommend it to anyone who appreciates real coffee."
+            }
+        ];
+        
+        // Selektujemo element u koji ćemo dodati svjedočanstva
+        const testimonialCarousel = document.querySelector('.testimonial-carousel');
+        
+        // Iteriramo kroz podatke o svjedočanstvima i dodajemo HTML za svako svjedočanstvo
+        testimonials.forEach(testimonial => {
+            // Kreiramo novi div za svako svjedočanstvo
+            const testimonialDiv = document.createElement('div');
+            testimonialDiv.classList.add('testimonial-item');
+        
+            // Dodajemo HTML sadržaj za svako svjedočanstvo
+            testimonialDiv.innerHTML = `
+                <div class="d-flex align-items-center mb-3">
+                    <img class="img-fluid" src="${testimonial.imageSrc}" alt="${testimonial.name}">
+                    <div class="ml-3">
+                        <h4>${testimonial.name}</h4>
+                        <i>${testimonial.rating}</i>
+                    </div>
+                </div>
+                <p class="m-0">${testimonial.feedback}</p>
+            `;
+        
+            // Dodajemo svjedočanstvo u glavni kontejner za karusele
+            testimonialCarousel.appendChild(testimonialDiv);
+        });
+
+
+
+
+
+        
+
 
         /* -----------------------Jquery----------------------- */
 
@@ -355,6 +413,58 @@
             });
           }
 
+
+          //Definisanje vrednosti menija
+          $(document).ready(function(){
+            const menuItems = [
+                {
+                    title: "Hot Coffee",
+                    items: [
+                        { name: "Turkish coffee", price: "$5", description: "Ground classic coffee beans with hot water", imgSrc: "img/menu-1.jpg" },
+                        { name: "Frappe", price: "$6", description: "A combination of ice, milk and instant coffee, often sweetened with syrup or sugar, then whipped to create a foam.", imgSrc: "img/Frappe.jpg" },                     
+                        { name: "Espresso", price: "$7", description: "Small, strong coffee prepared by pressing hot water through ground coffee.", imgSrc: "img/Espresso.png" }
+                    ]
+                },
+                {
+                    title: "Cold Coffee",
+                    items: [
+                        { name: "Caramel Macchiato on Ice", price: "$4", description: "Espresso with cold milk and added caramel syrup, served over ice.", imgSrc: "img/Macchiato.jpg" },
+                        { name: "Irish Coffee", price: "$9", description: "Coffee with Irish whiskey, sugar and cream.", imgSrc: "img/Irska.jpg" },
+                        { name: "Vietnamese Iced Coffee", price: "$7", description: "Condensed milk is used with brewed coffee, usually served over ice.", imgSrc: "img/Vietnamese.jpg" }
+                    ]
+                }
+            ];
+        
+            // Funkcija za kreiranje HTML elemenata za stavke menija
+            function createMenuItems(menuItem) {
+                let html = '';
+                menuItem.items.forEach(item => {
+                    html += `
+                        <div class="col-lg-6">
+                            
+                            <div class="row align-items-center mb-5">
+                                <div class="col-4 col-sm-3">
+                                    <img class="w-100 rounded-circle mb-3 mb-sm-0" src="${item.imgSrc}" alt="">
+                                    <h5 class="menu-price">${item.price}</h5>
+                                </div>
+                                <div class="col-8 col-sm-9">
+                                    <h4>${item.name}</h4>
+                                    <p class="m-0">${item.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                return html;
+            }
+                
+            let menuHtml = '';
+            menuItems.forEach(menu => {
+                menuHtml += createMenuItems(menu);
+            });
+
+            $('#menuItems').html(menuHtml);
+            });
          
         
         
