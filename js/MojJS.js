@@ -316,6 +316,8 @@
         navbarContainer.appendChild(nav);
 
 
+
+        //Uyimanje vrednost za carousel
         const testimonials = [
             {
                 name: "Emma Foster",
@@ -343,16 +345,12 @@
             }
         ];
         
-        // Selektujemo element u koji ćemo dodati svjedočanstva
         const testimonialCarousel = document.querySelector('.testimonial-carousel');
         
-        // Iteriramo kroz podatke o svjedočanstvima i dodajemo HTML za svako svjedočanstvo
         testimonials.forEach(testimonial => {
-            // Kreiramo novi div za svako svjedočanstvo
             const testimonialDiv = document.createElement('div');
             testimonialDiv.classList.add('testimonial-item');
         
-            // Dodajemo HTML sadržaj za svako svjedočanstvo
             testimonialDiv.innerHTML = `
                 <div class="d-flex align-items-center mb-3">
                     <img class="img-fluid" src="${testimonial.imageSrc}" alt="${testimonial.name}">
@@ -363,8 +361,6 @@
                 </div>
                 <p class="m-0">${testimonial.feedback}</p>
             `;
-        
-            // Dodajemo svjedočanstvo u glavni kontejner za karusele
             testimonialCarousel.appendChild(testimonialDiv);
         });
 
